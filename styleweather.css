@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+body{
+display:flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background-color: rgb(79, 151, 223);
+}
+.wrapper{
+    width:400px;
+    border-radius: 7px;
+    background: #fff;
+}
+.wrapper header{
+    font-size:21px;
+    color: rgb(91, 161, 231);
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+}
+header i{
+    cursor:pointer;
+    font-size: 0px;
+    margin-right: 8px;
+}
+.wrapper.active header i{
+    font-size:30px;
+    margin-left: 5px;
+}
+
+.wrapper .inputpart{
+margin:20px 25px 30px;
+
+}
+.wrapper.active .inputpart{
+    display:none;
+}
+
+.inputpart .info-txt{
+display:none;
+font-size: 17px;
+background: red;
+text-align: center;
+padding:12px 10px;
+border-radius: 7px;
+margin-bottom: 15px;
+}
+.info-txt.error{
+display: block;
+color:#721c24;
+background: #f2d7da;
+border:1px solid #f5c6cb;
+}
+.info-txt.pending{
+    color: #6ec8b6;
+background: #f2d7da;
+border:1px solid #f5c6cb;
+}
+
+.inputpart :where(input,button){
+    width:100%;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius: 7px;
+}
+.inputpart input{
+    text-align: center;
+    border:1px solid #bfbfbf;
+}
+.inputpart input:is(:focus,:valid){
+    border:2px solid rgb(91, 161, 231);
+}
+.inputpart .seperator{
+    height:1px;
+    width:100%;
+    margin:25px 0;
+    background: #ccc;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.seperator::before{
+content:'Or';
+color:#ccc;
+font-size: 15px;
+padding:0 15px;
+background: #fff;
+}
+.inputpart button{
+    color:#fff;
+    cursor:pointer;
+    background: #41aefc;
+}
+.wrapper.active .weather-part{
+    display:flex;
+}
+.wrapper .weather-part{
+    margin:34px 0 0;
+    display:none;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+.weather-part .temp{
+    display:flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .numb .dog{
+    font-size:40px;
+    margin:10px 5px 0 0;
+    display:block;
+}
+
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin:-15px 20px 10px;
+}
+.weather-part .location{
+    display:flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+.location i{
+    font-size:22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    
+    width: 100%;
+    border-top:1px solid #bfbfbf ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-details .column{
+width:100%;
+display:flex;
+align-items: center;
+justify-content: center;
+padding: 15px;
+}
+.column i{
+    color:#41aefc;
+    font-size: 40px;
+}
+.column .humidity{
+    border-left: 1px solid #bfbfbf;
+}
+.details .temp, .humidity span{
+    font-size:18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+.details .temp .deg{
+    margin:0;
+    font-size:17px;
+    pad:0 2px 0 1px;
+}
+.details p{
+    font-size:14px;
+    margin-top:-6px;
+}
+.weather-part .temp .numb-2 .dog{
+    font-size:40px;
+    margin:-9px 5px 0 0;
+    display:block;
+}
